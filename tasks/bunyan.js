@@ -30,6 +30,11 @@ module.exports = function (grunt) {
             args.push('--output');
             args.push(output);
         }
+        
+        if (options.condition) {
+            args.push('--condition');
+            args.push(options.condition);
+        }
 
         var names = this.args;
         if (names) {
